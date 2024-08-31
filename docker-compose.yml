@@ -1,0 +1,50 @@
+﻿version: '3.8'
+
+networks:
+  WalletRu:
+
+services:
+  postgres:
+    container_name: 'postgres'
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: WalletRuDb
+    ports:
+      - "5432:5432"
+    restart: always
+    networks:
+      - WalletRu
+
+  walletru.api:
+    container_name: walletru.api
+    image: walletru.api
+    build:
+      context: .
+      dockerfile: WalletRu.Api/Dockerfile
+    ports:
+      - "8080:8080" #http
+    depends_on:
+      postgres:
+        condition: service_started
+    restart: always
+    networks:
+      - WalletRu
+
+  walletru.client:
+    container_name: walletru.client
+    image: walletru.client
+    build:
+      context: .
+      dockerfile: WalletRu.Client/Dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      postgres:
+        condition: service_started
+      walletru.api:
+        condition: service_started
+    restart: always
+    networks:
+      - WalletRu

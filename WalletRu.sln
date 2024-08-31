@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WalletRu.Core", "WalletRu.Core", "{0D7A7595-2A27-41BA-B822-3B854CBAC188}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WalletRu.Infrastructure", "WalletRu.Infrastructure", "{EE716B55-1522-46D2-A6C6-8F14444692EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WalletRu.Presentation", "WalletRu.Presentation", "{B9600C17-3050-4D45-BBCB-6B195F72EEA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRu.Application", "WalletRu.Application\WalletRu.Application.csproj", "{D80C490E-52BF-43F4-8BD4-61760D29DA21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRu.Domain", "WalletRu.Domain\WalletRu.Domain.csproj", "{718ABFD1-2D61-4135-BD74-64A717D46743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRu.DAL", "WalletRu.DAL\WalletRu.DAL.csproj", "{34F960F1-18EB-423E-9C7D-EED7A29B0B51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletRu.Api", "WalletRu.Api\WalletRu.Api.csproj", "{8415A070-123A-4434-A4FF-A1D9917D13EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E753FE03-8A55-4D0B-AA3D-6CB497C4D985}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D80C490E-52BF-43F4-8BD4-61760D29DA21} = {0D7A7595-2A27-41BA-B822-3B854CBAC188}
+		{718ABFD1-2D61-4135-BD74-64A717D46743} = {0D7A7595-2A27-41BA-B822-3B854CBAC188}
+		{34F960F1-18EB-423E-9C7D-EED7A29B0B51} = {EE716B55-1522-46D2-A6C6-8F14444692EE}
+		{8415A070-123A-4434-A4FF-A1D9917D13EC} = {B9600C17-3050-4D45-BBCB-6B195F72EEA9}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D80C490E-52BF-43F4-8BD4-61760D29DA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80C490E-52BF-43F4-8BD4-61760D29DA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80C490E-52BF-43F4-8BD4-61760D29DA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80C490E-52BF-43F4-8BD4-61760D29DA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718ABFD1-2D61-4135-BD74-64A717D46743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718ABFD1-2D61-4135-BD74-64A717D46743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718ABFD1-2D61-4135-BD74-64A717D46743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718ABFD1-2D61-4135-BD74-64A717D46743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F960F1-18EB-423E-9C7D-EED7A29B0B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F960F1-18EB-423E-9C7D-EED7A29B0B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F960F1-18EB-423E-9C7D-EED7A29B0B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F960F1-18EB-423E-9C7D-EED7A29B0B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8415A070-123A-4434-A4FF-A1D9917D13EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8415A070-123A-4434-A4FF-A1D9917D13EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8415A070-123A-4434-A4FF-A1D9917D13EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8415A070-123A-4434-A4FF-A1D9917D13EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
