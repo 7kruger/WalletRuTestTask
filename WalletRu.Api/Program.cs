@@ -3,7 +3,6 @@ using WalletRu.Api.Middlewares;
 using WalletRu.Application;
 using WalletRu.Application.Common.Options;
 using WalletRu.DAL;
-using WalletRu.DAL.Data;
 using Serilog;
 using Serilog.Settings.Configuration;
 
@@ -30,17 +29,11 @@ builder.Host.UseSerilog((context, configuration) =>
 });
 
 builder.Services.AddApplication();
-builder.Services.AddDal();
+builder.Services.AddDal(builder.Configuration);
 
 builder.Services.AddSignalR();
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var dbInitializer = scope.ServiceProvider.GetRequiredService<DbInitializer>();
-    await dbInitializer.EnsureCreatedAsync();
-}
 
 if (app.Environment.IsDevelopment())
 {
